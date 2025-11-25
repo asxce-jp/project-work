@@ -1,0 +1,4 @@
+id,title,body,predicted_department,predicted_sentiment,timestamp
+101,Check-in rapido,personale gentile e pagamento senza problemi,Reception,positive,2025-11-11T20:58:13.577592
+102,Camera sporca,cattivo odore in stanza e bagno non pulito,Housekeeping,negative,2025-11-11T20:58:13.577592
+103,Colazione ottima,ristorante eccellente ma parcheggio scomodo,F&B,positive,2025-11-11T20:58:13.577592
