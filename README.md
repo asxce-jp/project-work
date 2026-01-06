@@ -87,7 +87,7 @@ id,title,body
 102,Camera sporca,cattivo odore in stanza e bagno non pulito
 103,Colazione ottima,ristorante eccellente ma parcheggio scomodo
 
-e salvalo in data/samples_to_predict.csv
+salvato in data/samples_to_predict.csv
 
 Poi:
     python3 src/infer.py data/samples_to_predict.csv
