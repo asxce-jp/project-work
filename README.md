@@ -44,18 +44,19 @@ pw20-hotel-reviews/
 1. Creazione ambiente virtuale
 - Per macOS/Linux:
   
-    python -m venv venv
+    _python -m venv venv_
   
-    source venv/bin/activate
+    _source venv/bin/activate_
 
 - Per Windows:
   
-    python -m venv venv
+    _python -m venv venv_
   
-    venv\Scripts\activate
+    _venv\Scripts\activate_
 
 2. Installazione dipendenze:
-    pip install -r requirements.txt
+   
+    _pip install -r requirements.txt_
 
 ## 1. Generazione Dataset
 (Il dataset può essere utilizzato anche già pronto in data/)
