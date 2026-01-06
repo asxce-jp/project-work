@@ -44,10 +44,12 @@ pw20-hotel-reviews/
 1. Creazione ambiente virtuale
 - Per macOS/Linux:
     python -m venv venv
+  
     source venv/bin/activate
 
 - Per Windows:
     python -m venv venv
+  
     venv\Scripts\activate
 
 2. Installazione dipendenze:
