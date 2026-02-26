@@ -18,22 +18,147 @@ DEPARTMENTS = ["Housekeeping", "Reception", "F&B"]  # 3 reparti dell'hotel
 SENTIMENTS  = ["positive", "negative"]  # 2 polarità di sentiment
 
 # === Lessici sintetici per generare recensioni realistiche ===
+LEX_HK_POS = [
+    "camera pulita e profumata", "letto comodo e ben fatto",
+    "bagno impeccabile", "biancheria fresca cambiata ogni giorno",
+    "stanza silenziosa e ben areata", "asciugamani morbidi e puliti",
+    "pulizia accurata nei dettagli", "ambiente curato e ordinato",
+    "personale delle pulizie discreto e professionale",
+    "moquette pulita e senza odori", "frigobar rifornito puntualmente",
+    "tutto funzionava perfettamente in camera",
+    "stanza pronta prima del previsto", "piumone caldo e confortevole",
+    "nessun problema durante tutto il soggiorno",
+    "camera silenziosa nonostante il piano alto",
+    "servizio di turndown serale molto gradito",
+    "pulizia eseguita anche nei giorni festivi",
+    "personale sorridente e disponibile",
+    "camera rifornita di tutto il necessario"
+]
+LEX_HK_NEG = [
+    "camera sporca all'arrivo", "letto scomodo e rumoroso",
+    "lenzuola macchiate e non cambiate", "bagno con muffa e calcare",
+    "odore sgradevole difficile da ignorare",
+    "polvere visibile su mobili e superfici",
+    "pavimento non lavato", "asciugamani umidi e consumati",
+    "climatizzatore rotto e non riparato",
+    "pulizia superficiale e frettolosa",
+    "biancheria non sostituita per più giorni",
+    "stanza rumorosa con pareti sottili",
+    "frigobar non funzionante", "specchio del bagno rotto",
+    "personale delle pulizie invadente e poco discreto",
+    "stanza non pronta all'orario di check-in",
+    "macchie sul copriletto", "zanzare in camera",
+    "nessuno ha risposto alla richiesta di asciugamani extra",
+    "camera che non veniva pulita se non su richiesta esplicita"
+]
 
-# Lessico per Housekeeping (pulizia, camere, comfort)
-LEX_HK_POS  = ["camera pulita e profumata", "staff cordiale e disponibile", "letto comodo", "colazione abbondante"]
-LEX_HK_NEG  = ["camera sporca", "staff scortese", "letto scomodo", "lenzuola macchiate"]
+LEX_RC_POS = [
+    "check-in rapido e senza attese", "personale accogliente e sorridente",
+    "pagamento gestito senza intoppi", "accoglienza calorosa all'arrivo",
+    "receptionist disponibile a qualsiasi ora",
+    "informazioni utili sulla città fornite spontaneamente",
+    "check-out rapido e senza sorprese in fattura",
+    "staff multilingue e competente",
+    "prenotazione taxi organizzata senza problemi",
+    "consigli personalizzati su ristoranti e attrazioni",
+    "upgrade di camera offerto gentilmente",
+    "richiesta speciale gestita con professionalità",
+    "orario di check-in anticipato accordato senza problemi",
+    "portiere sempre presente e reattivo",
+    "risposta rapida a ogni richiesta durante il soggiorno",
+    "deposito bagagli gestito con cura",
+    "rimborso processato velocemente",
+    "staff che ricordava le preferenze del cliente",
+    "area lounge della reception confortevole",
+    "comunicazioni pre-arrivo chiare e precise"
+]
+LEX_RC_NEG = [
+    "attesa lunghissima al check-in", "personale scortese e sbrigativo",
+    "errori nella fattura difficili da correggere",
+    "nessuna informazione fornita all'arrivo",
+    "receptionist distratto e poco professionale",
+    "prenotazione non trovata nel sistema",
+    "camera assegnata diversa da quella prenotata",
+    "nessuna risposta alle chiamate alla reception",
+    "check-out caotico con lunghe code",
+    "deposito bagagli smarrito",
+    "staff che non parlava nessuna lingua straniera",
+    "richiesta di late check-out ignorata",
+    "addebiti non autorizzati sulla carta",
+    "portiere mai presente quando serviva",
+    "informazioni errate sugli orari dei servizi",
+    "nessuno disponibile per assistenza notturna",
+    "upgrade promesso e mai consegnato",
+    "tono scostante e poco disponibile allo sportello",
+    "attesa di oltre un'ora per avere le chiavi",
+    "problemi con la prenotazione scaricati sul cliente"
+]
 
-# Lessico per Reception (accoglienza, check-in, pagamenti)
-LEX_RC_POS  = ["check-in veloce", "personale accogliente", "pagamento senza problemi", "accoglienza calorosa"]
-LEX_RC_NEG  = ["lunghe attese al check-in", "personale scortese", "errori nel pagamento", "servizio lento"]
+LEX_FB_POS = [
+    "colazione ricca e con prodotti freschi",
+    "ristorante di ottimo livello", "cameriere attento e premuroso",
+    "porzioni generose e ben presentate",
+    "menu vario con opzioni per ogni esigenza",
+    "cibo preparato al momento e servito caldo",
+    "carta dei vini curata e ben assortita",
+    "dessert artigianali di alta qualità",
+    "servizio al tavolo rapido e professionale",
+    "prodotti locali valorizzati nel menu",
+    "colazione servita puntualmente e senza attese",
+    "chef disponibile per richieste dietetiche speciali",
+    "ambiente del ristorante elegante e tranquillo",
+    "frutta fresca sempre disponibile a colazione",
+    "caffè eccellente servito a qualsiasi ora",
+    "personale di sala cortese e competente",
+    "menù fisso conveniente e di qualità",
+    "intolleranze alimentari gestite con attenzione",
+    "cocktail bar ben fornito con ottimi bartender",
+    "servizio in camera disponibile fino a tarda sera"
+]
+LEX_FB_NEG = [
+    "colazione povera e sempre uguale",
+    "cibo freddo servito come se fosse caldo",
+    "menù troppo limitato e senza varietà",
+    "porzioni insufficienti per il prezzo pagato",
+    "cameriere assente per lunghi periodi",
+    "qualità degli ingredienti deludente",
+    "nessuna opzione vegetariana o vegana disponibile",
+    "ristorante chiuso senza preavviso",
+    "conto errato e difficile da far correggere",
+    "attesa eccessiva prima di essere serviti",
+    "rumore insopportabile in sala durante i pasti",
+    "caffè annacquato e di scarsa qualità",
+    "prodotti confezionati spacci come freschi",
+    "personale di sala frettoloso e poco curato",
+    "orari del ristorante incompatibili con le esigenze dei clienti",
+    "servizio in camera in ritardo di oltre un'ora",
+    "intolleranze alimentari ignorate con rischio per la salute",
+    "ambiente del ristorante rumoroso e caotico",
+    "lista vini esaurita già a metà serata",
+    "cibo chiaramente riscaldato e non preparato fresco"
+]
 
-# Lessico per F&B (ristorazione, colazione, servizio)
-LEX_FB_POS  = ["colazione ricca e varia", "ristorante eccellente", "cameriere attento", "porzioni abbondanti"]
-LEX_FB_NEG  = ["colazione scarsa", "servizio lento", "menu limitato", "porzioni scarse"]
-
-# Titoli generici per le recensioni (non specifici per reparto)
-TITLES_POS  = ["Eccellente soggiorno!", "Servizio impeccabile", "Esperienza fantastica", "Consigliatissimo!"]
-TITLES_NEG  = ["Deludente esperienza", "Servizio pessimo", "Non tornerò mai più", "Molto insoddisfatto"]
+TITLES_POS = [
+    "Eccellente soggiorno!", "Servizio impeccabile", "Esperienza fantastica",
+    "Consigliatissimo!", "Soggiorno da ricordare", "Tutto perfetto",
+    "Tornerò sicuramente", "Hotel di qualità", "Personale straordinario",
+    "Soddisfatto al 100%", "Superate le aspettative", "Esperienza top",
+    "Hotel eccezionale", "Vale ogni centesimo", "Ci siamo trovati benissimo",
+    "Struttura ottima", "Personale disponibile e gentile",
+    "Soggiorno piacevolissimo", "Niente da dire, tutto perfetto",
+    "Lo consiglio a tutti"
+]
+TITLES_NEG = [
+    "Deludente esperienza", "Servizio pessimo", "Non tornerò mai più",
+    "Molto insoddisfatto", "Esperienza negativa", "Soldi buttati",
+    "Sotto ogni aspettativa", "Hotel da evitare", "Qualità inaccettabile",
+    "Personale scortese e impreparato", "Esperienza da dimenticare",
+    "Non lo consiglio a nessuno", "Struttura fatiscente",
+    "Rapporto qualità-prezzo pessimo", "Rimpiango di aver prenotato",
+    "Problemi irrisolti durante tutto il soggiorno",
+    "Zero stelle se potessi", "Gestione disastrosa",
+    "Aspettative completamente disattese", "Una delusione su tutta la linea"
+]
 
 def synthesize_review(department, sentiment):
     """
