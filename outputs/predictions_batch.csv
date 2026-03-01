@@ -1,11 +1,11 @@
 id,title,body,predicted_department,predicted_sentiment,timestamp
-101,Check-in rapido,personale gentile e pagamento senza problemi,Reception,positive,2026-03-01T18:03:23.995671
-102,Camera sporca,cattivo odore in stanza e bagno non pulito,Housekeeping,negative,2026-03-01T18:03:23.995671
-103,Colazione ottima,ristorante eccellente ma parcheggio scomodo,F&B,positive,2026-03-01T18:03:23.995671
-104,Pessimo servizio,reception scortese e attesa lunghissima,Reception,negative,2026-03-01T18:03:23.995671
-105,Posizione perfetta,vicinissimo al centro e alla stazione,Reception,positive,2026-03-01T18:03:23.995671
-106,Wi-Fi lento,connessione internet molto debole in camera,Housekeeping,negative,2026-03-01T18:03:23.995671
-107,Spa fantastica,centro benessere molto curato e rilassante,Housekeeping,positive,2026-03-01T18:03:23.995671
-108,Prezzo eccessivo,rapporto qualità-prezzo decisamente sfavorevole,F&B,negative,2026-03-01T18:03:23.995671
-109,Staff eccezionale,personale molto disponibile e professionale,Reception,positive,2026-03-01T18:03:23.995671
-110,Piscina inagibile,struttura datata e manutenzione insufficiente,F&B,negative,2026-03-01T18:03:23.995671
+101,Check-in rapido,personale gentile e pagamento senza problemi,Reception,positive,2026-03-01T18:07:16.753203
+102,Camera sporca,cattivo odore in stanza e bagno non pulito,Housekeeping,negative,2026-03-01T18:07:16.753203
+103,Colazione ottima,ristorante eccellente ma parcheggio scomodo,F&B,positive,2026-03-01T18:07:16.753203
+104,Pessimo servizio,reception scortese e attesa lunghissima,Reception,negative,2026-03-01T18:07:16.753203
+105,Posizione perfetta,vicinissimo al centro e alla stazione,Reception,positive,2026-03-01T18:07:16.753203
+106,Wi-Fi lento,connessione internet molto debole in camera,Housekeeping,negative,2026-03-01T18:07:16.753203
+107,Spa fantastica,centro benessere molto curato e rilassante,Housekeeping,positive,2026-03-01T18:07:16.753203
+108,Prezzo eccessivo,rapporto qualità-prezzo decisamente sfavorevole,F&B,negative,2026-03-01T18:07:16.753203
+109,Staff eccezionale,personale molto disponibile e professionale,Reception,positive,2026-03-01T18:07:16.753203
+110,Bagno inagibile,struttura datata e manutenzione insufficiente,Housekeeping,negative,2026-03-01T18:07:16.753203
