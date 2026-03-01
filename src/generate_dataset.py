@@ -128,7 +128,7 @@ LEX_FB_NEG = [
     "attesa eccessiva prima di essere serviti",
     "rumore insopportabile in sala durante i pasti",
     "caffè annacquato e di scarsa qualità",
-    "prodotti confezionati spacci come freschi",
+    "prodotti confezionati spacciati come freschi",
     "personale di sala frettoloso e poco curato",
     "orari del ristorante incompatibili con le esigenze dei clienti",
     "servizio in camera in ritardo di oltre un'ora",
