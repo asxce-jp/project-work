@@ -77,3 +77,6 @@ if __name__ == "__main__":
     
     # Legge il percorso del CSV da riga di comando, altrimenti usa il default
     input_csv = sys.argv[1] if len(sys.argv) > 1 else "data/samples_to_predict.csv"
+    
+    # Esegue la predizione batch e salva i risultati
+    predict_csv(input_csv)
