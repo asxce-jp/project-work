@@ -43,20 +43,15 @@ pw20-hotel-reviews/
 ## Installazione
 1. Creazione ambiente virtuale
 - Per macOS/Linux:
-  
-    _python -m venv venv_
-  
-    _source venv/bin/activate_
+    python -m venv venv
+    source venv/bin/activate
 
 - Per Windows:
-  
-    _python -m venv venv_
-  
-    _venv\Scripts\activate_
+    python -m venv venv
+    venv\Scripts\activate
 
 2. Installazione dipendenze:
-   
-    _pip install -r requirements.txt_
+    pip install -r requirements.txt
 
 ## 1. Generazione Dataset
 (Il dataset può essere utilizzato anche già pronto in data/)
@@ -88,11 +83,18 @@ Predizione singola da riga di comando.
 
 Prepara un CSV di input come:
 id,title,body
-101,Check-in rapido,Personale molto gentile e accogliente
+101,Check-in rapido,personale gentile e pagamento senza problemi
 102,Camera sporca,cattivo odore in stanza e bagno non pulito
 103,Colazione ottima,ristorante eccellente ma parcheggio scomodo
+104,Pessimo servizio,reception scortese e attesa lunghissima
+105,Posizione perfetta,vicinissimo al centro e alla stazione
+106,Wi-Fi lento,connessione internet molto debole in camera
+107,Spa fantastica,centro benessere molto curato e rilassante
+108,Prezzo eccessivo,rapporto qualità-prezzo decisamente sfavorevole
+109,Staff eccezionale,personale molto disponibile e professionale
+110,Piscina inagibile,struttura datata e manutenzione insufficiente
 
-salvato in data/samples_to_predict.csv
+e salvalo in data/samples_to_predict.csv
 
 Poi:
     python3 src/infer.py data/samples_to_predict.csv
@@ -145,15 +147,13 @@ Questi limiti sono discussi anche nell'elaborato della project work.
 - Multi-label (es. recensioni multi-reparto)
 - Confidence score e gestione incertezza
 - Dashboard più evoluta
+- API RESTful per implementazioni esterne
 
 ## Licenza
 Uso accademico / didattico
 
 ## Autore
 Jonatan Palomba
-
 Tema n. 5 Machine Learning per Processi Aziendali
-
 PW 20 Smistamento recensioni hotel e analisi sentimento con Machine Learning
-
 A.A. 2025
