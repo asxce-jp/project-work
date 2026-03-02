@@ -19,6 +19,7 @@ Il sistema comprende 3 componenti principali:
     - UI Streamlit
 
 ## Architettura
+```
 pw20-hotel-reviews/
 ├─ data/
 │  ├─ synthetic_reviews.csv
@@ -39,6 +40,7 @@ pw20-hotel-reviews/
 │  └─ confusion_matrix_sentiment.png
 ├─ requirements.txt
 └─ README.md
+```
 
 ## Installazione
 1. Creazione ambiente virtuale
